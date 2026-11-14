@@ -1,0 +1,128 @@
+/* Estilo principal do portal - visual inspirado nos anos 2000 */
+
+body {
+    background-color: #17132b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.cabecalho {
+    background-color: #29134b;
+    background-image: linear-gradient(120deg, #29134b, #551b70, #102b55);
+    text-align: center;
+    padding: 30px 15px;
+    border-bottom: 4px solid #00f5e9;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.logo span {
+    color: #ff3cac;
+}
+
+.cabecalho h1 {
+    color: #ffffff;
+    font-size: 2.4em;
+    margin: 10px 0;
+    text-shadow: 3px 3px #ff3cac;
+}
+
+.cabecalho p {
+    margin: 8px 0;
+}
+
+.apresentacao {
+    width: 94%;
+    margin: 22px auto;
+    padding: 18px;
+    background-color: #282044;
+    border: 2px solid #8e5cff;
+    text-align: center;
+}
+
+.apresentacao h2 {
+    color: #ff8bd1;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+/* Flexbox coloca as três áreas lado a lado, como no exemplo da apostila. */
+.principal {
+    width: 96%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.coluna {
+    flex-grow: 1;
+    background-color: #282044;
+    border: 2px solid #6542a6;
+    margin: 1%;
+    padding: 15px;
+    text-align: center;
+}
+
+.coluna h2 {
+    color: #00f5e9;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #ff3cac;
+}
+
+.descricao {
+    color: #e3d8ff;
+    margin-bottom: 15px;
+}
+
+.coluna img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 12px;
+    border: 3px solid #ff3cac;
+}
+
+/* Ajustes de enquadramento para deixar os rostos mais visíveis. */
+.coluna img.imagem-beleza {
+    height: 420px; /* Área maior para mostrar melhor as três personagens. */
+    object-fit: contain; /* Mantém a imagem inteira, sem cortar os rostos. */
+    object-position: center;
+    background-color: #17132b;
+}
+
+.coluna img.imagem-pop-rock {
+    object-position: center 12%;
+}
+
+.legenda {
+    color: #ffffff;
+    font-size: 0.95em;
+    margin: 7px 0 12px;
+}
+
+.rodape {
+    background-color: #0d0a19;
+    color: #c8b8e8;
+    text-align: center;
+    padding: 18px;
+    margin-top: 25px;
+    border-top: 3px solid #00f5e9;
+}
+
+/* Em telas menores, as colunas passam para a vertical para facilitar a leitura. */
+@media (max-width: 760px) {
+    .principal {
+        flex-direction: column;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.8em;
+    }
+}
